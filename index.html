@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling de Dados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <section id="intro">
+            <h1>Sobre o painel</h1>
+            <p id="story-text">
+                Este painel, fruto de uma parceria entre o Sebrae/MG e a Universidade Federal de Viçosa, é parte de uma pesquisa que visa compreender quais fatores contribuem para a mortalidade de micro e pequenas empresas no estado de Minas Gerais. Para atingir esse objetivo, foram coletadas respostas de <span class="keyword" id="keyword1">empresários</span> através de questionários aplicados no período de 1 a 31 de outubro de 2023. <br>
+            </p>
+            <p id="story-text">
+                O painel possibilita conhecer e visualizar alguns dos resultados dessa pesquisa em dimensões importantes para explicar a mortalidade de micro e pequenas empresas, entre elas características comportamentais, características do empresário, finanças, estratégia, marketing e recursos humanos. Além disso, é possível explorar as respostas através da utilização dos filtros, proporcionando uma compreensão mais profunda dos fatores que condicionam a sobrevivência das empresas em diferentes perfis, <span class="keyword" id="keyword2">setores</span> e <span class="keyword" id="keyword3">mesoregiões</span>.
+            </p>
+        </section>
+        <section id="keywords">
+            <div class="card" id="card1">
+                <p>1.983</p>
+            </div>
+            <div class="card" id="card2">
+                <p>25</p>
+            </div>
+            <div class="card" id="card3">
+                <p>12</p>
+            </div>
+        </section>
+        <section id="map-section">
+            <h2>Mesorregiões</h2>
+            <div id="map"></div>
+        </section>
+        <section id="treemap">
+            <h2>Mapa de Árvore dos Setores</h2>
+            <div id="tree"></div>
+        </section>
+        <section id="redirect-button">
+            <button onclick="window.location.href='https://lookerstudio.google.com/reporting/aeafe762-5c5b-42eb-9fee-e68dff20419a/page/p_sman3e3tid'">Clique aqui para saber mais</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

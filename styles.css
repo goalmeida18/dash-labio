@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    padding: 20px;
+}
+
+#intro {
+    height: 60vh; /* Ajuste a altura conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Adicione um espaço entre a seção intro e a próxima seção */
+}
+
+#story-text {
+    font-size: 1.5em;
+    max-width: 800px;
+    text-align: justify; /* Justificar o texto */
+    text-indent: 2em; /* Adicionar indentação na primeira linha de cada parágrafo */
+}
+
+.keyword {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    transition: all 1s ease;
+    font-weight: bold;
+}
+
+.keyword-card {
+    color: black;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+#keywords {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-top: 10px; /* Diminuir a distância entre o texto e os cards */
+}
+
+.card {
+    width: 300px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-top-left-radius: 50px; /* Bordas arredondadas específicas */
+    border-top-right-radius: 10px; /* Bordas arredondadas específicas */
+    border-bottom-right-radius: 50px; /* Bordas arredondadas específicas */
+    border-bottom-left-radius: 10px; /* Bordas arredondadas específicas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; /* Fundo branco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    position: relative;
+    padding: 30px;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    margin: 0;
+    font-size: 2em;
+    color: #000;
+}
+
+#map-section {
+    margin-top: 50px; /* Espaço entre os cards e o mapa */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Colocar título e mapa em coluna */
+    align-items: center; /* Centralizar o mapa e o título horizontalmente */
+    margin-bottom: 50px; /* Espaço entre o mapa e o treemap */
+}
+
+#map-section h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre o título e o mapa */
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    max-width: 1200px; /* Defina um valor máximo para a largura do mapa */
+}
+
+#treemap {
+    width: 100%;
+    height: 800px; /* Aumentar a altura do treemap */
+    margin-top: 50px; /* Espaço entre o mapa e o treemap */
+    display: flex;
+    flex-direction: column; /* Colocar título e treemap em coluna */
+    align-items: center; /* Centralizar o treemap e o título horizontalmente */
+}
+
+#treemap h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre o título e o treemap */
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Adiciona posição relativa para o contêiner */
+    max-width: 1200px; /* Defina um valor máximo para a largura do treemap */
+}
+
+.node {
+    position: absolute;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.node-label {
+    padding: 2px;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#redirect-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#redirect-button button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#redirect-button button:hover {
+    background-color: #0056b3;
+}
