@@ -173,28 +173,19 @@ function createTreemap() {
     const data = {
         name: "root",
         children: [
-            { name: "Comercio; reparação de veículos", value: 519 },
-            { name: "Atividades profissionais, científicas e técnicas", value: 326 },
-            { name: "Outras atividades de serviços", value: 227 },
-            { name: "Alojamento e alimentação", value: 188 },
-            { name: "Saúde Humana e Serviços sociais", value: 166 },
-            { name: "Informação e comunicação", value: 123 },
-            { name: "Construção", value: 73 },
-            { name: "Atividades administrativa", value: 72 },
-            { name: "Artes, Cultura, Esporte e Recreação", value: 48 },
-            { name: "Industriais de transformação", value: 46 },
-            { name: "Atividades imobilárias", value: 40 },
-            { name: "Educação", value: 39 },
-            { name: "Transporte, armazenagem e correio", value: 27 },
-            { name: "Eletricidade e gás", value: 24 },
-            { name: "Atividades financeiras", value: 20 },
-            { name: "Agricultura, pecuária, produção florestas", value: 18 },
-            { name: "Sem identificação", value: 10 },
-            { name: "Água, esgoto, gestão de resíduos", value: 8 },
-            { name: "Administração publica", value: 3 },
-            { name: "Industriais Extrativas", value: 3 },
-            { name: "Organismo internacional", value: 2 },
-            { name: "Serviços domésticos", value: 1 }
+            { name: "Comercio; reparação de veículos automotores e motocicletas", value: 675 },
+            { name: "Atividades profissionais, científicas e técnicas", value: 278 },
+            { name: "Saúde Humana e Serviços sociais", value: 180 },
+            { name: "Alojamento e alimentação", value: 151 },
+            { name: "Atividades administrativa e serviços complementares", value: 150 },
+            { name: "Industriais de transformação", value: 122 },
+            { name: "Educação", value: 83 },
+            { name: "Informação e comunicação", value: 71 },
+            { name: "Construção", value: 63 },
+            { name: "Outras atividades de serviços", value: 54 },
+            { name: "Atividades imobilárias", value: 49 },
+            { name: "Transporte, armazenagem e correio", value: 45 },
+            { name: "Artes, Cultura, Esporte e Recreação", value: 41 }
         ]
     };
 
