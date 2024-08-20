@@ -26,6 +26,12 @@ $(function () {
         })
         .setPin("#pinContainer", {pushFollowers: false}) // Previne empurrar conteúdo adicional para baixo
         .setTween(wipeAnimation)
+        .addIndicators({
+            name: '',
+            colorTrigger: 'transparent', 
+            colorStart: 'transparent',
+            colorEnd: 'transparent'
+        })
         .addTo(controller);
 
     createTreemap();
