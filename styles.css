@@ -1,99 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    height: 100%;
+    overflow-x: hidden; /* Impede que a barra de rolagem horizontal apareça */
 }
 
-.content {
-    padding: 20px;
-}
-
-#intro {
-    height: 60vh; /* Ajuste a altura conforme necessário */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px; /* Adicione um espaço entre a seção intro e a próxima seção */
-}
-
-#story-text {
-    font-size: 1.5em;
-    max-width: 800px;
-    text-align: justify; /* Justificar o texto */
-    text-indent: 2em; /* Adicionar indentação na primeira linha de cada parágrafo */
-}
-
-.keyword {
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: relative;
-    transition: all 1s ease;
-    font-weight: bold;
-}
-
-.keyword-card {
-    color: black;
-    font-size: 2em;
-    text-transform: capitalize;
-}
-
-#keywords {
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1s ease;
-    margin-top: 10px; /* Diminuir a distância entre o texto e os cards */
-}
-
-.card {
-    width: 300px;
-    height: 150px;
-    border: 2px solid #ddd;
-    border-top-left-radius: 50px; /* Bordas arredondadas específicas */
-    border-top-right-radius: 10px; /* Bordas arredondadas específicas */
-    border-bottom-right-radius: 50px; /* Bordas arredondadas específicas */
-    border-bottom-left-radius: 10px; /* Bordas arredondadas específicas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: #fff; /* Fundo branco */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    position: relative;
-    padding: 30px;
-}
-
-.card h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.card p {
-    margin: 0;
-    font-size: 2em;
-    color: #000;
-}
-
-#map-section {
-    margin-top: 50px; /* Espaço entre os cards e o mapa */
+#pinContainer {
     width: 100%;
-    display: flex;
-    flex-direction: column; /* Colocar título e mapa em coluna */
-    align-items: center; /* Centralizar o mapa e o título horizontalmente */
-    margin-bottom: 50px; /* Espaço entre o mapa e o treemap */
+    height: 100vh; /* Corrigido para garantir que o contêiner seja do tamanho da tela */
+    overflow: hidden; /* Garante que nenhum conteúdo de dentro estoure o contêiner */
+    perspective: 1000px;
 }
 
-#map-section h2 {
-    text-align: center;
-    margin-bottom: 20px; /* Espaço entre o título e o mapa */
+#slideContainer {
+    width: 400%; /* para conter 4 painéis, cada um com 100% da largura da janela */
+    height: 100%;
+    display: flex; /* Configurado para flex para alinhamento horizontal */
+    overflow: hidden; /* Previne que conteúdo dentro do slideContainer cause rolagem extra */
 }
+
+.panel {
+    height: 100vh; /* Certificando-se de que cada painel tenha altura da tela */
+    width: 25%; /* relativo ao pai -> 25% de 400% = 100% da largura da janela */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px; /* Adicionando espaçamento interno para o texto */
+    position: relative; /* Necessário para o posicionamento absoluto da logo */
+}
+
+.panel h2 {
+    font-size: 2em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: white; /* Cor do título */
+    text-align: center; /* Centralizar o título */
+}
+
+.panel p {
+    font-size: 1.45em; /* Ajustando o tamanho da fonte para um texto mais longo */
+    color: white;
+    text-align: justify; /* Justificar o texto para uma melhor legibilidade */
+    max-width: 800px; /* Define a largura máxima do texto */
+    margin: 10px auto; /* Centraliza o conteúdo dentro do painel */
+    text-indent: 2em; 
+}
+
+.logo {
+    position: absolute; /* Fixa a logo no canto superior direito */
+    top: 10px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    max-width: 150px; /* Limita a largura máxima da logo */
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+}
+
+.turqoise h2, .turqoise p {
+    color: black; /* Aplica a cor preta ao título e aos parágrafos */
+}
+
+.green h2, .green p {
+    color: black; /* Aplica a cor preta ao título e aos parágrafos */
+}
+
+.bordeaux h2, .bordeaux p {
+    color: black; /* Aplica a cor preta ao título e aos parágrafos */
+}
+
+.blue { background-color: #006eb3; padding: 0; }
+.turqoise { background-color: #e8e9e9;}
+.green { background-color: #f5f7fa; }
+.bordeaux { background-color: #ffffff; }
 
 #map {
     width: 100%;
@@ -101,26 +78,13 @@ body {
     max-width: 1200px; /* Defina um valor máximo para a largura do mapa */
 }
 
-#treemap {
-    width: 100%;
-    height: 800px; /* Aumentar a altura do treemap */
-    margin-top: 50px; /* Espaço entre o mapa e o treemap */
-    display: flex;
-    flex-direction: column; /* Colocar título e treemap em coluna */
-    align-items: center; /* Centralizar o treemap e o título horizontalmente */
-}
-
-#treemap h2 {
-    text-align: center;
-    margin-bottom: 20px; /* Espaço entre o título e o treemap */
-}
-
 #tree {
+    position: relative;
     width: 100%;
-    height: 100%;
-    position: relative; /* Adiciona posição relativa para o contêiner */
-    max-width: 1200px; /* Defina um valor máximo para a largura do treemap */
+    height: 500px;
+    max-width: 1200px; /* Defina um valor máximo para a largura do mapa */
 }
+
 
 .node {
     position: absolute;
@@ -139,16 +103,6 @@ body {
     padding: 2px;
 }
 
-.tooltip {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
 
 #redirect-button {
     display: flex;
