@@ -26,7 +26,6 @@ $(function () {
         })
         .setPin("#pinContainer", {pushFollowers: false}) // Previne empurrar conteúdo adicional para baixo
         .setTween(wipeAnimation)
-        //.addIndicators() adiciona indicadores (requer o plugin)
         .addTo(controller);
 
     createTreemap();
