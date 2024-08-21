@@ -3,6 +3,11 @@ body, html {
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* Impede que a barra de rolagem horizontal apareça */
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte Montserrat a todo o documento */
+}
+
+h1, h2, h3, h4, h5, h6, p, a, div {
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte Montserrat aos elementos principais */
 }
 
 #pinContainer {
