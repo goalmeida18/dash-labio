@@ -37,11 +37,19 @@ h1, h2, h3, h4, h5, h6, p, a, div {
 }
 
 .panel.blue {
-    padding-left: 15vw; /* Define o padding-left como 25% da largura da viewport */
+    padding-left: 15vw; /* Define o padding-left como 15% da largura da viewport */
 }
 
 .panel.turqoise {
-    padding-left: 15vw; /* Define o padding-left como 25% da largura da viewport */
+    padding-left: 15vw; /* Define o padding-left como 15% da largura da viewport */
+}
+
+.panel.green {
+    padding-left: 50vw; /* Define o padding-left como 50% da largura da viewport */
+}
+
+.panel.bordeaux {
+    padding-left: 50vw; /* Define o padding-left como 50% da largura da viewport */
 }
 
 .panel h2 {
