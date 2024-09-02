@@ -71,9 +71,9 @@ h1, h2, h3, h4, h5, h6, p, a, div {
 
 .logo {
     position: absolute; /* Fixa a logo no canto superior direito */
-    top: 10px; /* Distância do topo */
-    right: 20px; /* Distância da direita */
-    max-width: 150px; /* Limita a largura máxima da logo */
+    top: 50px; /* Distância do topo */
+    right: 50px; /* Distância da direita */
+    max-width: 320px; /* Limita a largura máxima da logo */
     z-index: 1000; /* Garante que a logo fique acima de outros elementos */
 }
 
