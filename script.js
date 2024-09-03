@@ -113,19 +113,19 @@ function createTreemap() {
         const data = {
             name: "root",
             children: [
-                { name: "Comercio; reparação de veículos", value: 675 },
+                { name: "Comércio; reparação de veículos", value: 675 },
                 { name: "Atividades profissionais, científicas e técnicas", value: 278 },
-                { name: "Saúde Humana e Serviços sociais", value: 180 },
+                { name: "Saúde humana e Serviços sociais", value: 180 },
                 { name: "Alojamento e alimentação", value: 151 },
                 { name: "Atividades administrativa", value: 150 },
-                { name: "Industriais de transformação", value: 122 },
+                { name: "Industrias de transformação", value: 122 },
                 { name: "Educação", value: 83 },
                 { name: "Informação e comunicação", value: 71 },
                 { name: "Construção", value: 63 },
                 { name: "Outras atividades de serviços", value: 54 },
                 { name: "Atividades imobilárias", value: 49 },
                 { name: "Transporte, armazenagem e correio", value: 45 },         
-                { name: "Arts, cultura, esporte e recreação", value: 18 }
+                { name: "Artes, cultura, esporte e recreação", value: 18 }
             ]
         };
     
@@ -142,12 +142,12 @@ function createTreemap() {
         treemapLayout(root);
     
         const colorMap = {
-            "Comercio; reparação de veículos": "#052941",
+            "Comércio; reparação de veículos": "#052941",
             "Atividades profissionais, científicas e técnicas": "#103778",
-            "Saúde Humana e Serviços sociais": "#265C4C",
+            "Saúde humana e Serviços sociais": "#265C4C",
             "Alojamento e alimentação": "#007565",
             "Atividades administrativa": "#448040",
-            "Industriais de transformação": "#B4CF66",
+            "Industrias de transformação": "#B4CF66",
             "Educação": "#C3BB00",
             "Informação e comunicação": "#FFCC29",
             "Construção": "#FF7949",
