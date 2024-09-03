@@ -141,10 +141,21 @@ function createTreemap() {
     
         treemapLayout(root);
     
-        const maxVal = d3.max(root.leaves(), d => d.value);
-        const colorScale = d3.scaleLinear()
-            .domain([0, maxVal])
-            .range(["#d3d3d3", "#00008b"]); // Escala de cinza a azul escuro
+        const colorMap = {
+            "Comercio; reparação de veículos": "#052941",
+            "Atividades profissionais, científicas e técnicas": "#103778",
+            "Saúde Humana e Serviços sociais": "#265C4C",
+            "Alojamento e alimentação": "#007565",
+            "Atividades administrativa": "#448040",
+            "Industriais de transformação": "#B4CF66",
+            "Educação": "#C3BB00",
+            "Informação e comunicação": "#FFCC29",
+            "Construção": "#FF7949",
+            "Outras atividades de serviços": "#FF5A34",
+            "Atividades imobilárias": "#E3381E",
+            "Transporte, armazenagem e correio": "#A62410",
+            "Artes, cultura, esporte e recreação": "#63190E"
+        };
     
         const nodes = d3.select('#tree')
             .selectAll('div')
@@ -156,7 +167,7 @@ function createTreemap() {
             .style('top', d => `${d.y0}px`)
             .style('width', d => `${d.x1 - d.x0}px`)
             .style('height', d => `${d.y1 - d.y0}px`)
-            .style('background', d => colorScale(d.value))
+            .style('background', d => colorMap[d.data.name])
             .on('mouseover', function(event, d) {
                 const tooltip = d3.select('body').append('div')
                     .attr('class', 'tooltip')
