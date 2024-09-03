@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6, p, a, div {
 }
 
 #redirect-button button {
-    padding-left: 45vw; /* Define o padding-left como 50% da largura da viewport */
+    padding: 15px 30px;
     font-size: 1.2em;
     color: #fff;
     background-color: #007bff;
